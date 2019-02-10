@@ -1,3 +1,4 @@
+signup= """
 <!doctype html>
 <html>
     <head>
@@ -5,17 +6,29 @@
     </head>
     <body>
         <h1> Sign-Up Form</h1><br>
-        <form action = '/', method = 'post'>    
+        <form action = 'validate-submission' method = 'post'>    
            <label> Username:
-            <input type = "text" name = "username"
-            <h4 name = "username_error">{{username_error}}</h4></>
+                <input type = "text" name = "username" 
+                <h4 name = "username_error">{{username_error}}</h4></>
+                <br>
+                <br>
+            <label>Password:
+                <input type = "password" name = "password"
+                <h4 name = "password_error">{{password_error}}</h4></>
+                <br>
+                <br>
+            <label>Verify Password:
+                <input type = "password" name = "verify_password"
+                <h4 name = "verify_password_error">{{verify_password_error}}</h4></>
+                <br>
+                <br>
+            <label>Email Address (optional):
+                <input type = "text" name = "email_address"
+                <h4 name = "email_address_error" value = "email_address_error">{{email_address_error}}</h4></>
+                <br>
+                <br>
             <input type = "submit" />
         </form>
-
-        <hr />
-
-    
-    
-
     </body>
 </html>
+"""
