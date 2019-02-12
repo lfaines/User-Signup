@@ -1,4 +1,3 @@
-signup= """
 <!doctype html>
 <html>
     <head>
@@ -8,7 +7,7 @@ signup= """
         <h1> Sign-Up Form</h1><br>
         <form action = 'validate-submission' method = 'post'>    
            <label> Username:
-                <input type = "text" name = "username" 
+                <input type = "text" name = "username" value="{{username}}" 
                 <h4 name = "username_error">{{username_error}}</h4></>
                 <br>
                 <br>
@@ -23,12 +22,11 @@ signup= """
                 <br>
                 <br>
             <label>Email Address (optional):
-                <input type = "text" name = "email_address"
-                <h4 name = "email_address_error" value = "email_address_error">{{email_address_error}}</h4></>
+                <input type = "text" name = "email_address" value="{{email_address}}"
+                <h4 name = "email_address_error">{{email_address_error}}</h4></>
                 <br>
                 <br>
             <input type = "submit" />
         </form>
     </body>
 </html>
-"""
