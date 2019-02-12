@@ -76,18 +76,9 @@ def validate_signup_form():
     elif email_address.count("@") > 1 or email_address.count(".") > 1 or email_address.count(" ") >= 1:
       email_address_error = "Please enter a valid Email."
       email_address = ""
-    #else:
     if username_error == "" and password_error== "" and verify_password_error== "" and email_address_error == "":
       un = "Welcome, " + username + "!"
       return redirect('/validated?un={0}'.format(un))
-    #else:
-    #  template = jinja_env.get_template('index.html')
-    #  return template.render(username_error = username_error, password_error = password_error, #email_address_error = email_address_error, username = username, password = password, #verify_password = verify_password, verify_password_error = verify_password_error, email_address = #email_address) 
-#
-
-      #if not verify_password_error and not email_address_error: 
-      #  un = "Welcome, " + username + "!"
-      #  return redirect('/validated?un={0}'.format(un))
     
     template = jinja_env.get_template('index.html')
     return template.render(username_error = username_error, password_error = password_error, email_address_error = email_address_error, username = username, password = password, verify_password = verify_password, verify_password_error = verify_password_error, email_address = email_address) 
